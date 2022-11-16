@@ -18,15 +18,15 @@ if [[ "$MODE" == "reinstall" ]]; then
   MODE="--mode reinstall"
 fi
 
-dfx deploy --no-wallet --network $NETWORK token \
+dfx deploy --network $NETWORK token \
 	--argument="(
         \"data:image/jpeg;base64,$(base64 DIP20-logo.png)\",
-        \"DIP20 Token\",
-        \"TKN\",
+        \"BETS\",
+        \"BETS\",
         8:nat8,
         $GENESIS_AMT:nat,
         principal \"$(dfx identity get-principal)\", 
-        0, 
+        1000,
         principal \"$(dfx identity get-principal)\", 
         principal \"$CAP_ID\"
         )" \
